@@ -9,7 +9,47 @@
 		</head>
 
 		<body>
-			<h1>It works!</h1>
+			<!-- Header -->
+			<header>
+				<!-- Site logo -->
+				<img
+					src="_BASEURL.'/site/images/logo.svg'"
+					alt="saffron"
+					cms:eval="src"
+					class="logo"
+					/>
+
+				<h1><cms:text constant="lead_title"/></h1>
+				<p><cms:text constant="lead_text"/></p>
+
+				<!-- Link to open Dialog form -->
+				<a href="javascript:void(0)" id="action">
+					<cms:text constant="button"/>
+				</a>
+			</header>
+
+			<!-- Section Products -->
+			<section class="products">
+				<!-- lead article with title from generic template -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="products_article"
+					template="stock/article_generic.xml"
+				>
+				<param name="title" value=""/>
+				</cms:module>
+				<!-- LI of articles connect to site sprite by text id -->
+				<ul>
+					<cms:module
+							name="articles"
+							action="show_list"
+							group="products_group"
+							template="parts/group_list.xml"
+						/>
+				</ul>
+			</section>
+
 		</body>
 	</html>
 </document>
