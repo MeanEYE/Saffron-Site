@@ -39,6 +39,7 @@
 				>
 				<param name="title" value=""/>
 				</cms:module>
+
 				<!-- LI of articles connect to site sprite by text id -->
 				<ul>
 					<cms:module
@@ -50,6 +51,51 @@
 				</ul>
 			</section>
 
+			<section class="gallery">
+			<!-- Gallery Module List of images from group -->
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="main_gallery"
+					template="parts/main_gallery.xml"
+				/>
+			</section>
+			<footer>
+				<!-- container for content -->
+				<div class="content_left">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="footer_article"
+					template="stock/article_generic.xml"
+					>
+					<param name="title" value=""/>
+				</cms:module>
+				<p><cms:text constant="call_us"/></p>
+				<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+					cms:eval="href"
+					class="phone"
+					>
+					<cms:text constant="phone"/>
+				</a>
+				</div>
+
+				<!-- Contact form on the right-->
+				<div class="form_container">
+					<p><cms:text constant="form_title"/></p>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+				<!-- Copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
 		</body>
 	</html>
 </document>
