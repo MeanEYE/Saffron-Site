@@ -55,3 +55,184 @@ header a:hover {
 	top: 73%;
 	box-shadow: 0px 27px 23px -17px rgba(0,0,0,0.75);
 }
+
+/*
+* Section Features
+*/
+
+section.products {
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	text-align: center;
+}
+
+section.products ul {
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+}
+
+section.products ul li {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(~'100% / 3');
+}
+
+section.products ul li svg {
+	width: 100px;
+	height: auto;
+}
+
+/*
+*Section Gallery
+*/
+section.gallery {
+	// padding: 0 calc(~'(100% - 1200px)' / 2 );
+	text-align: center;
+	padding-top: 1em;
+}
+
+section.gallery img {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/*
+*Footer
+*/
+
+footer {
+	padding: 5em calc(~'(100% - 1200px)' / 2 );
+	background-image: url(../images/footer_background.jpg);
+	background-size: 1920px 700px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+footer div.content_left {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}
+
+footer div.content_left article {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+footer div.content_left article:after {
+	content: "";
+	top: 100%;
+	left: 0;
+	display: block;
+	width: 50%;
+	background-color: white;
+	height: 1px;
+}
+
+footer div.content_left article h2 {
+	margin-top: 0;
+}
+
+footer div.content_left article p,
+footer div.content_left article h2 {
+	color: white;
+}
+
+footer div.content_left p {
+		color: white;
+}
+
+footer div.content_left a {
+	text-decoration: none;
+	color: white;
+	background-color: @color_text;
+	padding: 1em;
+	border-radius: 15px;
+	margin: 0.5em 0;
+	display: inline-block;
+}
+
+//Form Container
+footer div.form_container  {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	box-sizing: border-box;
+	padding: 1em;
+	border: 5px solid @color_text;
+	background-color: white;
+}
+
+footer div.form_container p {
+	color: @color_text;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 1em;
+	margin: 0;
+}
+
+footer div.form_container form {
+	display: block;
+	width: 100%;
+}
+
+footer div.form_container form label {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 1em;
+}
+
+footer div.form_container form label select,
+footer div.form_container form label input {
+	padding: 1em 0.25em;
+	display: inline-block;
+	vertical-align: middle;
+	width: 70%;
+	box-sizing: border-box;
+	background-color: white;
+}
+
+footer div.form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30%;
+}
+
+footer div.form_container div.controls {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: right;
+}
+
+footer div.form_container div.controls button {
+	text-decoration: none;
+	color: white;
+	background-color: @color_text;
+	padding: 1em;
+	border-radius: 15px;
+	display: inline-block;
+	font-weight: 700;
+}
+
+footer div.copyright {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: @color_text;
+	color: white;
+	text-align: center;
+	background-position: calc(~'50% - 130px') center;
+	padding: 1em 0;
+}
+
+footer div.copyright a {
+	text-decoration: none;
+	color: @color_button;
+}
