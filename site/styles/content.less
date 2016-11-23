@@ -1,0 +1,57 @@
+/**
+* Content Style Sheet
+* Site Name Saffron
+*
+* Copyright (c) 2016. by Way2CU, http://way2cu.com
+* Authors: Iliya Melishev
+*/
+
+header {
+	text-align: center;
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	background-image: url(../images/header_background.jpg);
+	background-size: 1920px 600px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	min-height: 600px;
+	padding-top: 1em;
+	position: relative;
+}
+
+header img {
+	display: block;
+	width: 400px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+header p,
+header h1 {
+	color: white;
+	display: block;
+	margin: 1em auto;
+	font-weight: 700;
+}
+
+header p {
+	font-size: 1.3em;
+}
+
+header a {
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	color: white;
+	background-color: @color_button;
+	padding: 1.5em;
+	border-radius: 15px;
+	box-shadow:  0px 0px 23px -5px rgba(0,0,0,0.75);
+	transition: all 0.3s;
+}
+
+header a:hover {
+	top: 73%;
+	box-shadow: 0px 27px 23px -17px rgba(0,0,0,0.75);
+}
