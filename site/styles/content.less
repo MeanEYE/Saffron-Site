@@ -86,15 +86,15 @@ section.products ul li svg {
 /*
 *Section Gallery
 */
-section.gallery {
-	// padding: 0 calc(~'(100% - 1200px)' / 2 );
-	text-align: center;
-	padding-top: 1em;
-}
-
-section.gallery img {
+//background image connected to template main_galelry.xml
+section.gallery a {
 	display: inline-block;
 	vertical-align: top;
+	width: 25%;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	height: calc(~'100vw * 0.65 / 4');
 }
 
 /*
@@ -155,6 +155,11 @@ footer div.content_left a {
 	display: inline-block;
 }
 
+footer div.content_left a:hover {
+	color: @color_button;
+}
+
+//floating form style grouping
 //Form Container
 footer div.form_container  {
 	display: inline-block;
@@ -166,6 +171,7 @@ footer div.form_container  {
 	background-color: white;
 }
 
+div.floating_form p,
 footer div.form_container p {
 	color: @color_text;
 	font-weight: 700;
@@ -174,11 +180,13 @@ footer div.form_container p {
 	margin: 0;
 }
 
+div.floating_form form,
 footer div.form_container form {
 	display: block;
 	width: 100%;
 }
 
+div.floating_form form label,
 footer div.form_container form label {
 	display: block;
 	width: 100%;
@@ -186,6 +194,8 @@ footer div.form_container form label {
 	padding-bottom: 1em;
 }
 
+div.floating_form form label select,
+div.floating_form form label input,
 footer div.form_container form label select,
 footer div.form_container form label input {
 	padding: 1em 0.25em;
@@ -194,14 +204,17 @@ footer div.form_container form label input {
 	width: 70%;
 	box-sizing: border-box;
 	background-color: white;
+	border: 1px solid @color_text;
 }
 
+div.floating_form form label span,
 footer div.form_container form label span {
 	display: inline-block;
 	vertical-align: middle;
 	width: 30%;
 }
 
+div.floating_form div.controls,
 footer div.form_container div.controls {
 	display: block;
 	width: 100%;
@@ -209,6 +222,7 @@ footer div.form_container div.controls {
 	text-align: right;
 }
 
+div.floating_form div.controls button,
 footer div.form_container div.controls button {
 	text-decoration: none;
 	color: white;
@@ -217,6 +231,12 @@ footer div.form_container div.controls button {
 	border-radius: 15px;
 	display: inline-block;
 	font-weight: 700;
+	border: 1px solid transparent;
+}
+
+div.floating_form div.controls button:hover,
+footer div.form_container div.controls button:hover {
+	color: @color_button;
 }
 
 footer div.copyright {
@@ -234,5 +254,30 @@ footer div.copyright {
 
 footer div.copyright a {
 	text-decoration: none;
+	color: @color_button;
+}
+
+div.dialog.visible {
+	top: 20%;
+}
+div.dialog.visible div.title {
+	background-color: @color_button;
+}
+
+div.dialog.visible div.inner_content div.floating_form {
+	display: block;
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+div.dialog.visible div.content div.command_bar a {
+	margin-top: 0.5em;
+	padding: 0.5em;
+	font-family: "ultra";
+	background-color: @color_text;
+	border-radius: 15px;
+}
+
+div.dialog.visible div.content div.command_bar a:hover {
 	color: @color_button;
 }
