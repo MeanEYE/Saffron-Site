@@ -10,7 +10,7 @@
 		</head>
 
 		<body>
-
+			<cms:desktop>
 			<!-- Dialog form -->
 			<div class="floating_form">
 					<p><cms:text constant="form_container_title"/></p>
@@ -20,6 +20,7 @@
 						text_id="contact_form"
 						/>
 				</div>
+			</cms:desktop>
 
 			<header>
 				<!-- Site logo -->
@@ -34,9 +35,16 @@
 				<p><cms:text constant="lead_text"/></p>
 
 				<!-- Link to open Dialog form -->
-				<a href="javascript:void(0)" id="action">
-					<cms:text constant="button"/>
-				</a>
+				<cms:desktop>
+					<a href="javascript:void(0)" class="action">
+						<cms:text constant="button"/>
+					</a>
+				</cms:desktop>
+				<cms:mobile>
+					<a href="#form" class="action">
+						<cms:text constant="button"/>
+					</a>
+				</cms:mobile>
 			</header>
 
 			<!-- Section Products -->
@@ -92,7 +100,7 @@
 				</div>
 
 				<!-- Contact form on the right-->
-				<div class="form_container">
+				<div class="form_container" id="form">
 					<p><cms:text constant="form_container_title"/></p>
 					<cms:module
 						name="contact_form"
