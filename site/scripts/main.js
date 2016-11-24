@@ -70,6 +70,9 @@ Site.on_load = function() {
 		Site.floating_form.hide();
 		return true;
 	})
+
+	//Light box
+	Site.home_page_gallery = new LightBox('section.gallery a', false, false, true);
 };
 
 
