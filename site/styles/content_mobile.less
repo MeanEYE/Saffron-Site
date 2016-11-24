@@ -6,10 +6,245 @@
  * Authors: Iliya Melishev
  */
 
- header {
- 	text-align: center;
- 	background-image: url(../images/mobile_header_bg.jpg);
- 	background-size: 100% auto;
- 	background-position: center;
- 	background-repeat: no-repeat;
- }
+header {
+	text-align: center;
+	background-image: url(../images/mobile_header_bg.jpg);
+	background-size: 100% auto;
+	background-position: center top;
+	background-repeat: no-repeat;
+	color: white;
+	height: 100vw;
+}
+
+header img {
+	width: 50%;
+	height: auto;
+	padding: 1em 0;
+}
+
+header h1 {
+	font-size: 1.5em;
+}
+
+header p {
+	margin: 0;
+	padding-bottom: 1em;
+}
+
+header a {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	text-decoration: none;
+	color: white;
+	background-color: @color_button;
+	padding: 0.5em;
+	border-radius: 15px;
+	box-shadow:  0px 0px 23px -5px rgba(0,0,0,0.75);
+}
+
+section.products {
+	text-align: center;
+	padding: 0 1em;
+}
+
+section.products article {
+	display: block;
+	width: 100%;
+}
+
+section.products ul {
+	padding: 0;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	list-style: none;
+}
+
+section.products ul li {
+	display: block;
+	width: 100%;
+}
+
+section.products ul li svg {
+	width: 25%;
+	height: 25%;
+	display: block;
+	margin: 0 auto;
+}
+
+section.gallery a {
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	display: block;
+	width: 100%;
+	height: calc(~'100vw * 0.65');
+}
+
+footer {
+	color: white;
+	background-color: #905508;
+	background-image: url(../images/mobile_footer_bg.jpg);
+	background-size: 100% auto;
+	background-position: center top;
+	background-repeat: no-repeat;
+	padding: 0 1em;
+	padding-bottom: 1em;
+	position: relative;
+}
+
+footer div.content_left {
+	display: block;
+}
+
+footer div.content_left article {
+	display: block;
+	width: 100%;
+}
+
+footer div.content_left article:after {
+	content: "";
+	top: 100%;
+	left: 0;
+	display: block;
+	width: 50%;
+	background-color: white;
+	height: 1px;
+}
+
+footer div.content_left article h2 {
+	margin: 0;
+	padding: 1em 0;
+}
+
+footer div.content_left a {
+	text-decoration: none;
+	color: white;
+	background-color: @color_text;
+	padding: 1em;
+	border-radius: 15px;
+	margin: 0.5em 0;
+	display: inline-block;
+	transition: all 0.3s;
+}
+
+//Form Container
+footer div.form_container  {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1em;
+	border: 5px solid @color_text;
+	background-color: white;
+}
+
+div.floating_form p,
+footer div.form_container p {
+	color: @color_text;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 1em;
+	margin: 0;
+}
+
+div.floating_form form,
+footer div.form_container form {
+	display: block;
+	width: 100%;
+}
+
+div.floating_form form label,
+footer div.form_container form label {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 1em;
+}
+
+div.floating_form form label select,
+div.floating_form form label input,
+footer div.form_container form label select,
+footer div.form_container form label input {
+	padding: 1em 0.25em;
+	display: inline-block;
+	vertical-align: middle;
+	width: 70%;
+	box-sizing: border-box;
+	background-color: white;
+	border: 1px solid @color_text;
+}
+
+div.floating_form form label span,
+footer div.form_container form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30%;
+	color: @color_text;
+}
+
+div.floating_form div.controls,
+footer div.form_container div.controls {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: right;
+}
+
+div.floating_form div.controls button,
+footer div.form_container div.controls button {
+	text-decoration: none;
+	color: white;
+	background-color: @color_text;
+	padding: 1em;
+	border-radius: 15px;
+	display: inline-block;
+	font-weight: 700;
+	border: 1px solid transparent;
+	transition: all 0.3s;
+}
+
+div.floating_form div.controls button:hover,
+footer div.form_container div.controls button:hover {
+	color: @color_button;
+}
+
+footer div.copyright {
+	position: absolute;
+	display: block;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: @color_text;
+	color: white;
+	text-align: center;
+	background-position: calc(~'50% - 130px') center;
+	padding: 1em 0;
+}
+
+footer div.copyright a {
+	text-decoration: none;
+	color: @color_button;
+}
+
+div.dialog.visible {
+	top: 20%;
+}
+div.dialog.visible div.title {
+	background-color: @color_button;
+}
+
+div.dialog.visible div.inner_content div.floating_form {
+	display: block;
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+div.dialog.visible div.content div.command_bar a {
+	margin-top: 0.5em;
+	padding: 0.5em;
+	font-family: "ultra";
+	background-color: @color_text;
+	border-radius: 15px;
+}
