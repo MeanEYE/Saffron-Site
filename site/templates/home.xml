@@ -9,7 +9,17 @@
 		</head>
 
 		<body>
-			<!-- Header -->
+
+			<!-- Dialog form -->
+			<div class="floating_form">
+					<p><cms:text constant="form_container_title"/></p>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+
 			<header>
 				<!-- Site logo -->
 				<img
@@ -82,7 +92,7 @@
 
 				<!-- Contact form on the right-->
 				<div class="form_container">
-					<p><cms:text constant="form_title"/></p>
+					<p><cms:text constant="form_container_title"/></p>
 					<cms:module
 						name="contact_form"
 						action="show"
