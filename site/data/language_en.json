@@ -5,9 +5,10 @@
     "button":"GET IN CONTACT",
     "call_us":"For immediate inquiries, you may reach us at",
     "phone":"844-384-3903",
-    "form_title":"Send us your Contacting Information We will Call you Back!",
+    "form_container_title":"Send us your Contacting Information We will Call you Back!",
     "send":"Send Form",
     "copyright_holder": "Developed by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>",
-    "copyright_text": "All rights reserved."
+    "copyright_text": "All rights reserved.",
+    "form_title": "Saffron Contact Form"
 
 }
