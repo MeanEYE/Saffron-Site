@@ -51,6 +51,25 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	//Dialog form
+	Site.floating_form = new Dialog();
+	Site.floating_form
+		.setTitle(language_handler.getText(null, 'form_title'))
+		.setContentFromDOM('div.floating_form')
+		.setSize(600, 400);
+
+	//Button to call floating form dialog
+	Site.button = document.querySelector('a#action');
+	Site.button.addEventListener('click',function(){
+		Site.floating_form.show();
+	});
+
+	// create handler for submitting dialog form
+	Caracal.ContactForm.list[0].events.connect('submit-success', function(event) {
+		Site.floating_form.hide();
+		return true;
+	})
 };
 
 
