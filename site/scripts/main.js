@@ -52,6 +52,7 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
+	if (!Site.is_mobile()) {
 	//Dialog form
 	Site.floating_form = new Dialog();
 	Site.floating_form
@@ -60,7 +61,7 @@ Site.on_load = function() {
 		.setSize(600, 400);
 
 	//Button to call floating form dialog
-	Site.button = document.querySelector('a#action');
+	Site.button = document.querySelector('a.action');
 	Site.button.addEventListener('click',function(){
 		Site.floating_form.show();
 	});
@@ -70,6 +71,8 @@ Site.on_load = function() {
 		Site.floating_form.hide();
 		return true;
 	})
+
+	};
 
 	//Light box
 	Site.home_page_gallery = new LightBox('section.gallery a', false, false, true);
