@@ -108,14 +108,24 @@ footer div.content_left article:after {
 	top: 100%;
 	left: 0;
 	display: block;
-	width: 50%;
+	width: 100%;
+	margin-bottom: 1em;
 	background-color: white;
 	height: 1px;
+}
+
+footer div.content_left article h1 {
+	font-weight: 400;
 }
 
 footer div.content_left article h2 {
 	margin: 0;
 	padding: 1em 0;
+}
+
+footer div.content_left article p strong {
+	display: inline-block;
+	padding-top: 1em;
 }
 
 footer div.content_left a {
@@ -174,6 +184,10 @@ footer div.form_container form label input {
 	box-sizing: border-box;
 	background-color: white;
 	border: 1px solid @color_text;
+
+	&:focus {
+		border: 1px solid @color_button;
+	}
 }
 
 div.floating_form form label span,
@@ -200,7 +214,6 @@ footer div.form_container div.controls button {
 	padding: 1em;
 	border-radius: 15px;
 	display: inline-block;
-	font-weight: 700;
 	border: 1px solid transparent;
 	transition: all 0.3s;
 }
