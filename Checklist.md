@@ -22,9 +22,9 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [x] Code in `main.js` targets all pages. Code meant for individual pages is in separate files;
 	- [x] Styles are written to target LTR by default with RTL modifications, even on RTL-only sites.
 - Contact form:
-	- [ ] SendGrid API access is configured;
-	- [ ] Mandrill API access is configured;
-	- [ ] SMTP credentials are configured and working;
+	- [x] SendGrid API access is configured;
+	>- [x] Mandrill API access is configured;
+	>- [x] SMTP credentials are configured and working;
 	- [ ] Default sender email;
 	- [ ] Default recipient;
 	- [x] Forms have honeypot field;
@@ -32,10 +32,10 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [ ] Templates have subject properly defined;
 	- [ ] Form submits and client/developer receives email.
 - Shop:
-	- [ ] Desired payment method is enabled and configured;
-	- [ ] Default warehouse is created;
-	- [ ] Default currency is selected;
-	- [ ] Contact form template for transaction is created and selected;
-	- [ ] Shop is not in testing mode.
+	>- [x] Desired payment method is enabled and configured;
+	>- [x] Default warehouse is created;
+	>- [x] Default currency is selected;
+	>- [x] Contact form template for transaction is created and selected;
+	>- [x] Shop is not in testing mode.
 - Articles:
 	- [x] Each article has a title even if it's not used;
