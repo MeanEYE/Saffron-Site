@@ -15,30 +15,25 @@
 // @import 'footer_mobile.less';
 
 body {
-	background-color: white;
-	color: black;
+	background-color: @color_background;
+	color: @color_text;
 	font-family: "ultra","raleway",Arial, serif;
 }
 
 h1,h2,h3,h4,h5,button {
 	font-family: "ultra";
+	font-weight: 400;
 }
 
 p {
 	font-family: "raleway";
+	margin: 0;
+	margin-bottom: @paragraph_spacing;
+	padding: 0;
 }
 
 label span {
 	font-family: "raleway";
-}
-
-
-@import (css) 'stock/copyright_mobile.css';
-
-
-body {
-	background-color: @color_background;
-	color: @color_text;
 }
 
 h1,
@@ -48,11 +43,5 @@ h4,
 h5 {
 	margin: 0;
 	margin-bottom: @header_spacing;
-	padding: 0;
-}
-
-p {
-	margin: 0;
-	margin-bottom: @paragraph_spacing;
 	padding: 0;
 }
